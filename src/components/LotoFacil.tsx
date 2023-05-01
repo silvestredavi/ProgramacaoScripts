@@ -3,7 +3,6 @@ import "../styles/LotoFacil.css";
 import useLoteria from "../hooks/SortHook";
 import Informacao from "./Informacao";
 import PremioSeguinte from "./PremioSeguinte";
-import Dezenas from "./Dezenas";
 import Vencedores from "./Vencedores";
 import InfoJogo from "./InfoJogo";
 function LotoFacil() {
@@ -16,7 +15,7 @@ function LotoFacil() {
             </div>
 
             <div className="col-2">
-                <div className="loto">
+                <div className="loto" style={{marginBottom:"6%"}}>
                     <ul>
                         {lotoFacil.dezenas ? lotoFacil.dezenas.map((element:any) =>
                             <li>{element}</li>

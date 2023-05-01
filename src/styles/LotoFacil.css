@@ -59,9 +59,17 @@ ul{
     padding-inline-start: 0px;
 }
 .winnersNumber{
-    color:rgb(0, 92, 169);
+    color:#0066B3;
 
 }
 .gameDescription{
     color:grey;
+}
+.loto ul li{
+    display: inline-block;
+    color:#930989;
+    font-size:1.8rem;
+    padding: 20px;
+    border-bottom: solid 1px #d5d9df;
+    width:13%;
 }

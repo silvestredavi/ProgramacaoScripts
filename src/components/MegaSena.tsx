@@ -1,6 +1,5 @@
 import trevo from "../assets/trevo-megasena.png"
 import "../styles/MegaSena.css";
-import "../styles/Dezenas.css";
 import Informacao from "./Informacao";
 import useLoteria from "../hooks/SortHook";
 import PremioSeguinte from "./PremioSeguinte";
@@ -10,13 +9,13 @@ import InfoJogo from "./InfoJogo";
 function MegaSena() {
     const { megaSena, carregamento } = useLoteria();
     return (
-        <div className="column megasena" style={{ display: carregamento ? "" : "none", marginLeft: 30}}>
+        <div className="column megasena" style={{ display: carregamento ? "" : "none", marginLeft: "5%"}}>
             <div className="col-1">
                 <Informacao img={trevo} tipo={"MEGASENA"} cor={"#209869"} data={megaSena.dataProximoConcurso}  />
                 <PremioSeguinte valor={megaSena.valorEstimadoProximoConcurso} cor={"#209869"} />
             </div>
 
-            <div className="megasena-col-2">
+            <div className="col-mega">
                 <div className="mega">
                     <ul>
                         {megaSena.dezenas ? megaSena.dezenas.map((element:any) =>

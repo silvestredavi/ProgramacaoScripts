@@ -12,7 +12,7 @@ function Informacao({img, tipo, cor, data}:any) {
 
             </div>
             <div className="descricao">
-                Estimativa de premio do proximo concuncurso. Sorteio {data}
+                Estimativa de premio do próximo concurso. Sorteio {data}
             </div>
         </>
     )
