@@ -1,22 +1,16 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+
 import "../styles/Nav.css"
+import { useState } from "react";
 
 export default function Nav(){
-    function disabled(e:any){
-        var link = document.getElementsByTagName('a');
-        e.target.classList.add("disabled");
-
-        for(var i = 0; i< link.length; i++){
-            if(link[i] !== e.target)
-                link[i].classList.remove("disabled");
-        }
-    }
-
+    let currentPath = useLocation();
+    
     return (
-        <div className="nav">
-            <Link onClick={e => disabled(e)} className='nav-lotofacil disabled' to="/">Lotofácil</Link>
-            <Link onClick={e => disabled(e)} className='nav-megasena' to='/megasena'>Megasena</Link>
-            <Link onClick={e => disabled(e)} className='nav-quina' to='/quina'>Quina</Link>
+        <div className="nav"> 
+            <Link className={currentPath.pathname === "/" ? "nav-lotofacil disabled" : "nav-lotofacil"} to="/">Lotofácil</Link>
+            <Link className={currentPath.pathname === "/megasena" ? "nav-megasena disabled" : "nav-megasena"} to='/megasena'>Megasena</Link>
+            <Link className={currentPath.pathname === "/quina" ? "nav-quina disabled" : "nav-quina"} to='/quina'>Quina</Link>
         </div>
     )
 }

@@ -1,5 +1,4 @@
 import { Provider } from "./contexts"
-import Principal from './pages/Principal';
 import Index from "./routes";
 
 function App() {
