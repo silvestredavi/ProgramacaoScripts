@@ -1,8 +1,6 @@
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import "../styles/Nav.css"
-import { useState } from "react";
-
 export default function Nav(){
     let currentPath = useLocation();
     
